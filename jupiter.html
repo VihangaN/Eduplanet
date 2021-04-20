@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <style>
+    #progress {
+      height: 100vh;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      position: absolute;
+      z-index: 999;
+    }
+
+    #logo-splash {
+      width: 150px;
+    }
+
+    #logo_base {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      float: left;
+      z-index: 99;
+      width: 200px;
+    }
+
+    #logo {
+      width: 200px;
+    }
+
+    #menu_base {
+      width: 80px;
+      height: 450px;
+      background: green;
+      position: absolute;
+      left: 20px;
+      top: 55%;
+      transform: translateY(-50%);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      z-index:99;
+    }
+
+    .planet_item{
+      width:100px;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    .mars{
+      width:78px
+    }
+
+    .satern{
+width:120px;
+    }
+    .earth{
+      width:80px;
+    }
+
+    .planet_item:hover{
+      transform: scale(1.2);
+      transition: 0.5s;
+    }
+  </style>
+
+  <body style="margin: 0px; overflow: hidden">
+    <div id="progress">
+      <img id="logo-splash" src="./images/logo-animated.svg" alt="" />
+    </div>
+
+    <div id="logo_base">
+      <img src="./images/logo.png" id="logo" alt="" />
+    </div>
+
+    <div id="menu_base">
+      <a href="index.html">
+      <img src="./images/planets/sattern.png"  class="planet_item satern" alt="">
+    </a>
+      <a href="mars.html">
+      <img src="./images/planets/mars.png"  class="planet_item mars" alt="">
+    </a>
+    <a href="jupiter.html">
+      <img src="./images/planets/jupiter.png"  class="planet_item" alt="">
+  </a>
+      <img src="./images/planets/earth.png"  class="planet_item earth" alt="">
+    </div>
+
+    <a-scene
+      embedded
+      vr-mode-ui="enabled: false;"
+      arjs="debugUIEnabled: false;"
+    >
+      <a-marker-camera
+        preset="custom"
+        type="pattern"
+        url="markers/sattern.patt"
+      >
+        <a-entity
+          gltf-model="url(./models/jupyter/scene.gltf)"
+          scale="0.001 0.001 0.001"
+          rotation="0 1 0"
+          
+        >
+          <a-animation
+            attribute="rotation"
+            easing="linear"
+            dur="10000"
+            to="0 360 0"
+            repeat="indefinite"
+          >
+          </a-animation>
+        </a-entity>
+
+        <a-image
+          src="images/sattern.png"
+          position="2 0 0"
+          width="2px"
+          height="4px"
+        ></a-image>
+      </a-marker-camera>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+
+    <!-- loading screen -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        var scene = document.querySelector("a-scene");
+        scene.addEventListener("loaded", (e) => {
+          document.getElementById("progress").style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
