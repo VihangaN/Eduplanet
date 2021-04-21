@@ -95,7 +95,9 @@ width:120px;
     <a href="jupiter.html">
       <img src="./images/planets/jupiter.png"  class="planet_item" alt="">
   </a>
+  <a href="earth.html">
       <img src="./images/planets/earth.png"  class="planet_item earth" alt="">
+    </a>
     </div>
 
     <a-scene
@@ -103,11 +105,9 @@ width:120px;
       vr-mode-ui="enabled: false;"
       arjs="debugUIEnabled: false;"
     >
-      <a-marker-camera
-        preset="custom"
-        type="pattern"
-        url="markers/sattern.patt"
+      <a-marker-camera preset="hiro" 
       >
+      <!-- type="pattern" url="markers/jupiter.patt" -->
         <a-entity
           gltf-model="url(./models/jupyter/scene.gltf)"
           scale="0.001 0.001 0.001"
@@ -125,7 +125,7 @@ width:120px;
         </a-entity>
 
         <a-image
-          src="images/sattern.png"
+          src="images/jupiter.png"
           position="2 0 0"
           width="2px"
           height="4px"
