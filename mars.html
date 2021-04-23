@@ -15,15 +15,17 @@
     </div>
     <div id="menu_base">
       <a href="index.html">
-        <img src="./images/planets/sattern.png" class="planet_item satern" alt=""/>
-      </a>
+      <img src="./images/planets/sattern.png"  class="planet_item satern" alt="">
+    </a>
       <a href="mars.html">
-        <img src="./images/planets/mars.png" class="planet_item mars" alt="" />
-      </a>
-      <a href="jupiter.html">
-        <img src="./images/planets/jupiter.png" class="planet_item" alt="" />
-      </a>
-      <img src="./images/planets/earth.png" class="planet_item earth" alt="" />
+      <img src="./images/planets/mars.png"  class="planet_item mars" alt="">
+    </a>
+    <a href="jupiter.html">
+      <img src="./images/planets/jupiter.png"  class="planet_item" alt="">
+  </a>
+  <a href="earth.html">
+      <img src="./images/planets/earth.png"  class="planet_item earth" alt="">
+    </a>
     </div>
 
     <a-scene
@@ -31,14 +33,14 @@
       vr-mode-ui="enabled: false;"
       arjs="debugUIEnabled: false;"
     >
-      <a-marker-camera
+      <a-marker
         preset="custom"
         type="pattern"
         url="markers/mars.patt"
       >
         <a-entity
           gltf-model="url(./models/mars/scene.gltf)"
-          scale="1 1 1"
+          scale="2 2 2"
           rotation="0 0 0"
           rotation="0 0 0"
         >
@@ -54,11 +56,11 @@
 
         <a-image
           src="images/mars.png"
-          position="1.65 0 0"
+          position="2.5 0 0"
           width="2px"
-          height="4px"
+          height="3px"
         ></a-image>
-      </a-marker-camera>
+      </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
