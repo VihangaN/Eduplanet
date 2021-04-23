@@ -10,6 +10,9 @@
     <div id="progress">
       <img id="logo-splash" src="./images/logo-animated.svg" alt="" />
     </div>
+    <div id="marker-loader-base">
+      <img src="./images/marker-loader.svg" id="marker-loader" alt="">
+    </div>
 
     <div id="logo_base">
       <img src="./images/logo.png" id="logo" alt="" />
@@ -43,7 +46,7 @@
       vr-mode-ui="enabled: false;"
       arjs="debugUIEnabled: false;"
     >
-      <a-marker preset="custom" type="pattern" url="markers/jupiter.patt">
+      <a-marker id="marker" preset="custom" type="pattern" url="markers/jupiter.patt">
         <a-entity
           gltf-model="url(./models/jupyter/scene.gltf)"
           scale="0.001 0.001 0.001"
@@ -78,6 +81,10 @@
       const splash = () => {
         document.getElementById("progress").style.display = "none";
       };
+
+      document.getElementById('marker').addEventListener("markerFound", (e)=>{ 
+        document.getElementById("marker-loader-base").style.display = "none";
+      })
     </script>
   </body>
 </html>
