@@ -58,14 +58,17 @@
     cursor: pointer;
   }
   .mars {
-    width: 78px;
+    width: 70px;
   }
 
   .satern {
     width: 120px;
   }
   .earth {
-    width: 80px;
+    width: 72px;
+  }
+  .jupiter{
+    width: 90px;
   }
 
   .planet_item:hover {
@@ -84,5 +87,11 @@
       width: 50px;
       transition: 0.5s;
       cursor: pointer;
+    }
+    .satern {
+      width: 90px;
+    }
+    .jupiter{
+      width:65px;
     }
   }

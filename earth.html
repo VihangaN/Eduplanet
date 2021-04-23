@@ -27,7 +27,7 @@
         <img src="./images/planets/mars.png" class="planet_item mars" alt="" />
       </a>
       <a href="jupiter.html">
-        <img src="./images/planets/jupiter.png" class="planet_item" alt="" />
+        <img src="./images/planets/jupiter.png" class="planet_item jupiter" alt="" />
       </a>
       <a href="earth.html">
         <img
@@ -79,6 +79,10 @@
       const splash = () => {
         document.getElementById("progress").style.display = "none";
       };
+
+      if(document.querySelector("a-marker").object3D.visible == true){
+        alert('found');
+      }
     </script>
   </body>
 </html>
