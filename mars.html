@@ -5,7 +5,7 @@
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   <link rel="stylesheet" href="app.css">
 
-  <body style="margin: 0px; overflow: hidden">
+  <body style="margin: 0px; overflow: hidden" onload="splash()">
     <div id="progress">
       <img id="logo-splash" src="./images/logo-animated.svg" alt="" />
     </div>
@@ -75,12 +75,9 @@
     <!-- loading screen -->
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        var scene = document.querySelector("a-scene");
-        scene.addEventListener("loaded", (e) => {
-          document.getElementById("progress").style.display = "none";
-        });
-      });
+      const splash = ()=>{
+        document.getElementById("progress").style.display = "none";
+      }
     </script>
   </body>
 </html>
