@@ -1,5 +1,9 @@
 **MTIT AR Assignment**
 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/195f1509-cfad-447d-a627-74fbb143593a/deploy-status)](https://app.netlify.com/sites/mtit/deploys)
+
+
 https://mtit.netlify.app/
 
 ![WhatsApp Image 2021-04-23 at 23 12 01](https://user-images.githubusercontent.com/41939687/115913371-251e8300-a48e-11eb-84bc-1cb9787e1264.jpeg)
