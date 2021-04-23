@@ -34,7 +34,7 @@
       vr-mode-ui="enabled: false;"
       arjs="debugUIEnabled: false;"
     >
-      <a-marker-camera
+      <a-marker
         preset="custom"
         type="pattern"
         url="markers/sattern.patt"
@@ -61,7 +61,7 @@
           width="2px"
           height="4px"
         ></a-image>
-      </a-marker-camera>
+      </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
@@ -70,11 +70,11 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        var scene = document.querySelector("a-scene");
-        scene.addEventListener("loaded", (e) => {
+        // var scene = document.querySelector("a-scene");
+        // scene.addEventListener("loaded", (e) => {
           document.getElementById("progress").style.display = "none";
         });
-      });
+      // });
     </script>
   </body>
 </html>
